@@ -13,6 +13,7 @@
   • DRIVE LINKS: already set — search "drive.google.com" to change them.
   • DATE: search for  data-edit="deadline".
   • HELPER NAMES: search "Rina, Rose or Jess".
+  • HERO PHOTO: search "hero-photo" — change the src to swap the image.
   ════════════════════════════════════════════════════════════════
 -->
 
@@ -80,6 +81,15 @@
     max-width: 540px; margin-left: auto; margin-right: auto;
   }
   .hero-sub em { font-style: italic; color: var(--rose); }
+
+  /* ---------- hero photo ---------- */
+  .hero-photo {
+    display: block;
+    width: clamp(220px, 52vw, 300px);
+    height: auto;
+    margin: 0.4rem auto clamp(1.8rem, 4vw, 2.6rem);
+    filter: drop-shadow(0 18px 36px rgba(0,0,0,0.5));
+  }
 
   .divider {
     display: flex; align-items: center; justify-content: center;
@@ -213,6 +223,9 @@
   <!-- ===================== HERO ===================== -->
   <header>
     <p class="eyebrow reveal" data-edit="label">The Last Boquiren</p>
+
+    <img class="hero-photo reveal" src="https://i.postimg.cc/Hst87nnP/Polaroid-Photos-Family-Photo-Collage-(500-x-500-px).png" alt="Polaroid photo of Baby Rae" />
+
     <h1 class="display reveal" data-edit="title">A gift for Rae</h1>
     <p class="hero-sub reveal">Before she says "I do," we're gathering the moments, voices and memories that remind Rae just how loved she is.</p>
 
@@ -226,7 +239,7 @@
 
   <!-- ===================== THE NOTE ===================== -->
   <section class="note">
-    <p class="reveal">As a surprise for Rae, the Boquirens are putting together a keepsake of her loved ones and we'd love you to be part of it.</p>
+    <p class="reveal">As a surprise for Rae, the Boquirens are putting together a keepsake from her loved ones and we'd love you to be part of it.</p>
     <span class="signoff reveal">With love, the Boquirens</span>
   </section>
 
