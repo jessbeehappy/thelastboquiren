@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A gift for Rae</title>
+
+<!--
+  ════════════════════════════════════════════════════════════════
+  EDIT THESE FOUR THINGS BEFORE PUBLISHING
+  ════════════════════════════════════════════════════════════════
+
+  1. THE TITLE + LABEL ABOVE IT
+     Search for  data-edit="label"  and  data-edit="title".
+     The label states the occasion; the title is the short, warm line.
+     Title ideas: "A gift for Rae" / "For Rae, with love" / "All our love for Rae"
+
+  2. THE PHOTO DRIVE LINK
+     Search for  PHOTO_DRIVE_LINK  and paste your Google Drive folder URL.
+
+  3. THE VOICE MEMO DRIVE LINK
+     Search for  VOICE_DRIVE_LINK  and paste your Google Drive folder URL.
+
+  4. THE "SUBMIT BY" DATE
+     Search for  data-edit="deadline".
+  ════════════════════════════════════════════════════════════════
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --wine-deep: #2A0911;   /* flat dark burgundy — page ground */
+    --wine:      #420F1C;    /* panels / cards */
+    --wine-soft: #53132410;  /* (unused placeholder) */
+    --panel-hi:  #531324;    /* lifted panel on hover */
+    --blush:     #F3E6E1;    /* warm cream — primary text */
+    --cream-dim: #D2B8BE;    /* muted cream — body copy */
+    --rose:      #D290A1;    /* dusty rose accent (replaces gold) */
+    --rose-soft: #E6BCC8;    /* soft rose for buttons / hover */
+    --line:      rgba(210, 144, 161, 0.26);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--wine-deep);
+    color: var(--blush);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ---------- shared ---------- */
+  .eyebrow {
+    font-family: 'Jost', sans-serif; font-weight: 400;
+    letter-spacing: 0.36em; text-transform: uppercase;
+    font-size: 0.72rem; color: var(--rose);
+  }
+  .display {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    line-height: 1.05; color: var(--blush);
+  }
+  a { color: inherit; }
+
+  /* ---------- hero ---------- */
+  header {
+    text-align: center;
+    padding: clamp(3.5rem, 9vw, 7rem) 1.5rem clamp(2rem, 5vw, 3.5rem);
+    max-width: 820px; margin: 0 auto;
+  }
+  .rose-mark { width: clamp(96px, 16vw, 132px); height: auto; display: block; margin: 0 auto clamp(1.6rem, 3vw, 2.4rem); }
+  .rose-mark path { vector-effect: non-scaling-stroke; }
+
+  header .eyebrow { margin-bottom: 1.5rem; }
+
+  h1.display {
+    font-size: clamp(2.9rem, 9vw, 5.4rem); letter-spacing: 0.01em;
+  }
+  h1.display em { font-style: italic; color: var(--rose); font-weight: 500; }
+
+  .hero-sub {
+    margin-top: 1.7rem; color: var(--cream-dim);
+    font-size: clamp(1rem, 2.4vw, 1.18rem);
+    max-width: 540px; margin-left: auto; margin-right: auto;
+  }
+  .hero-sub em { font-style: italic; color: var(--rose); }
+
+  .divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0.9rem; margin: clamp(2rem, 5vw, 3rem) auto 0;
+    color: var(--rose); max-width: 300px;
+  }
+  .divider::before, .divider::after { content: ""; height: 1px; flex: 1; background: var(--line); }
+  .divider svg { width: 16px; height: 16px; }
+
+  /* ---------- the note ---------- */
+  .note {
+    max-width: 660px; margin: 0 auto;
+    padding: clamp(1rem, 4vw, 2rem) 1.5rem clamp(3rem, 7vw, 4.5rem);
+    text-align: center;
+  }
+  .note p {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(1.35rem, 3.4vw, 1.72rem); line-height: 1.55; color: var(--blush);
+  }
+  .note p + p { margin-top: 1.1rem; }
+  .note .welcome {
+    font-size: clamp(1.15rem, 2.9vw, 1.4rem);
+    color: var(--cream-dim);
+  }
+  .note .welcome em { font-style: italic; color: var(--rose); }
+  .note .signoff {
+    display: block; margin-top: 1.9rem;
+    font-family: 'Jost', sans-serif; font-weight: 400;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    font-size: 0.72rem; color: var(--rose);
+  }
+
+  /* ---------- contribution cards ---------- */
+  .ways {
+    background: var(--wine);
+    padding: clamp(3rem, 8vw, 5.5rem) 1.5rem;
+  }
+  .ways-inner { max-width: 980px; margin: 0 auto; }
+  .ways-head { text-align: center; margin-bottom: clamp(2.4rem, 5vw, 3.4rem); }
+  .ways-head h2 { font-size: clamp(2rem, 5.5vw, 3rem); margin-top: 0.9rem; }
+
+  .cards {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1.2rem, 3vw, 1.8rem);
+  }
+  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--wine-deep);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: clamp(2rem, 4vw, 2.8rem);
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(.2,.7,.2,1), border-color 0.5s, background 0.5s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: var(--rose);
+    background: var(--panel-hi);
+  }
+  .card .num {
+    position: absolute; top: 1rem; left: 1.3rem;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1.05rem; color: var(--rose); opacity: 0.8;
+  }
+  .card-icon { width: 52px; height: 52px; color: var(--rose); margin-bottom: 1.4rem; }
+  .card h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: clamp(1.6rem, 4vw, 2.1rem); color: var(--blush); margin-bottom: 0.7rem;
+  }
+  .card p { color: var(--cream-dim); font-size: 0.98rem; max-width: 35ch; margin-bottom: 1.9rem; }
+
+  .btn {
+    margin-top: auto;
+    display: inline-flex; align-items: center; gap: 0.65rem;
+    font-family: 'Jost', sans-serif; font-weight: 400;
+    letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.76rem;
+    color: var(--wine-deep); background: var(--rose-soft);
+    padding: 0.9rem 1.8rem; border-radius: 2px; text-decoration: none;
+    transition: background 0.35s, transform 0.35s, box-shadow 0.35s;
+  }
+  .btn:hover {
+    background: #F2D7DE;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px -14px rgba(210,144,161,0.5);
+  }
+  .btn svg { width: 15px; height: 15px; }
+
+  .ways-help {
+    text-align: center;
+    margin-top: clamp(2rem, 4vw, 2.8rem);
+    color: var(--cream-dim);
+    font-size: clamp(0.98rem, 2.3vw, 1.08rem);
+    max-width: 46ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ways-help strong { color: var(--rose); font-weight: 400; }
+
+  /* ---------- footer ---------- */
+  footer {
+    text-align: center;
+    padding: clamp(3rem, 7vw, 4.5rem) 1.5rem clamp(2.5rem, 5vw, 3.5rem);
+    max-width: 600px; margin: 0 auto;
+  }
+  footer .rose-mini { width: 28px; height: 28px; color: var(--rose); margin: 0 auto 1.6rem; display: block; }
+  footer .deadline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: clamp(1.2rem, 3vw, 1.5rem); color: var(--blush);
+  }
+  footer .deadline strong { color: var(--rose); font-style: normal; font-weight: 600; }
+  footer .fine { margin-top: 1.3rem; font-size: 0.85rem; letter-spacing: 0.1em; color: var(--cream-dim); }
+
+  /* ---------- entrance animation ---------- */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .card, .btn { transition: none; }
+  }
+
+  a:focus-visible { outline: 2px solid var(--rose-soft); outline-offset: 4px; }
+</style>
+</head>
+
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <header>
+    <p class="eyebrow reveal" data-edit="label">The Last Boquiren</p>
+    <h1 class="display reveal" data-edit="title">A gift for Rae</h1>
+    <p class="hero-sub reveal">Before she says "I do," we're collecting the moments, voices and memories that remind Raelene just how loved she is — and we'd love yours among them.</p>
+
+    <div class="divider reveal" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3c-3 0-5 2-5 5 0 4 5 8 5 8s5-4 5-8c0-3-2-5-5-5z"/>
+        <path d="M12 16v5"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ===================== THE NOTE ===================== -->
+  <section class="note">
+    <p class="reveal">As a surprise for Rae, the Boquirens are putting together a keepsake — a collection of favourite photos and heartfelt voice memos from the people who hold her dear.</p>
+    <p class="reveal">Whether it's a moment you shared, a memory that makes you smile, or a few words you've always wanted her to hear — we want it in here.</p>
+    <span class="signoff reveal">With love, the Boquirens</span>
+  </section>
+
+  <!-- ===================== WAYS TO CONTRIBUTE ===================== -->
+  <section class="ways">
+    <div class="ways-inner">
+      <div class="ways-head reveal">
+        <p class="eyebrow">Two ways to share</p>
+        <h2 class="display">Add Your Piece</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- PHOTO CARD -->
+        <article class="card reveal">
+          <span class="num">i</span>
+          <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="6" y="12" width="36" height="26" rx="3"/>
+            <path d="M17 12l3-5h8l3 5"/>
+            <circle cx="24" cy="25" r="7"/>
+            <circle cx="24" cy="25" r="2.5"/>
+          </svg>
+          <h3>Share a Photo</h3>
+          <p>Your favourite photo with Rae — a candid, a memory, a moment you love. Drop it in our shared folder.</p>
+          <!-- PHOTO_DRIVE_LINK ↓ paste your Google Drive photo folder URL into href -->
+          <a class="btn" href="PHOTO_DRIVE_LINK" target="_blank" rel="noopener">
+            Upload a photo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6"/><path d="M5 12l7-7 7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- VOICE CARD -->
+        <article class="card reveal">
+          <span class="num">ii</span>
+          <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="19" y="6" width="10" height="20" rx="5"/>
+            <path d="M14 22a10 10 0 0 0 20 0"/>
+            <path d="M24 32v8"/>
+            <path d="M18 40h12"/>
+          </svg>
+          <h3>Leave a Voice Memo</h3>
+          <p>A short message — a memory, a wish, an inside joke. Little ones are welcome to record one too. Hearing your voices will mean the world.</p>
+          <!-- VOICE_DRIVE_LINK ↓ paste your Google Drive voice-memo folder URL into href -->
+          <a class="btn" href="VOICE_DRIVE_LINK" target="_blank" rel="noopener">
+            Add a voice memo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6"/><path d="M5 12l7-7 7 7"/></svg>
+          </a>
+        </article>
+
+      </div>
+
+      <p class="ways-help reveal"><strong>Not sure how to upload?</strong> Hand your photo or message to any Boquiren and we'll happily add it for you.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <svg class="rose-mini" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 4c-2.5 0-4 1.6-4 4 0 2.6 4 5 4 5s4-2.4 4-5c0-2.4-1.5-4-4-4z"/>
+      <path d="M12 13v7"/><path d="M8 17c-2-1-4 0-4 0"/><path d="M16 17c2-1 4 0 4 0"/>
+    </svg>
+    <p class="deadline reveal" data-edit="deadline">Please add yours by <strong>Sunday, 26 July 2026</strong>.</p>
+    <p class="fine reveal">Thank you!</p>
+  </footer>
+
+<script>
+  (function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var el = e.target;
+          setTimeout(function () { el.classList.add('in'); }, (el.dataset.delay || 0));
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    [document.querySelector('header'), document.querySelector('.note'), document.querySelector('.ways'), document.querySelector('footer')].forEach(function (g) {
+      if (!g) return;
+      g.querySelectorAll('.reveal').forEach(function (el, idx) { el.dataset.delay = idx * 110; });
+    });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>
